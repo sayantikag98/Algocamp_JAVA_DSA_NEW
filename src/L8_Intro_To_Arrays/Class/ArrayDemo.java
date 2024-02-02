@@ -4,7 +4,7 @@ public class ArrayDemo {
     public static void main(String[] args) {
         float[] demo = new float[10];
         for(float d: demo){
-            System.out.println(d);
+            System.out.println(d); //0.0 \n 0.0 ...
         }
     }
 }
