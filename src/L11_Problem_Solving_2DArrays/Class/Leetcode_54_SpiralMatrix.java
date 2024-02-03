@@ -13,32 +13,36 @@ public class Leetcode_54_SpiralMatrix {
     private static List<Integer> spiralOrder(int[][] matrix) {
         int n = matrix.length, m = matrix[0].length;
         List<Integer> ans = new ArrayList<>();
-        int top = 0, left = 0, right = m-1, bottom = n-1;
-        while(ans.size()<n*m){
+        int top = 0, left = 0, right = m-1, bottom = n-1, count = 0;
+        while(count<n*m){
             //go right
-            for(int j = left; ans.size()<n*m && j<=right; j++){
+            for(int j = left; count<n*m && j<=right; j++){
                 ans.add(matrix[top][j]);
+                count++;
             }
 
             top++;
 
             //go down
-            for(int i = top; ans.size()<n*m && i<=bottom; i++){
+            for(int i = top; count<n*m && i<=bottom; i++){
                 ans.add(matrix[i][right]);
+                count++;
             }
 
             right--;
 
             //go left
-            for(int j = right; ans.size()<n*m && j>=left; j--){
+            for(int j = right; count<n*m && j>=left; j--){
                 ans.add(matrix[bottom][j]);
+                count++;
             }
 
             bottom--;
 
             //go up
-            for(int i = bottom; ans.size()<n*m && i>=top; i--){
+            for(int i = bottom; count<n*m && i>=top; i--){
                 ans.add(matrix[i][left]);
+                count++;
             }
 
             left++;
