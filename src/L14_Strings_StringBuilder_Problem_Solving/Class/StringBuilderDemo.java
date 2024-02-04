@@ -26,5 +26,13 @@ public class StringBuilderDemo {
         //setCharAt()
         sb.setCharAt(0, 'A');
         System.out.println(sb); // "Abca"
+
+        sb.delete(0,2); //start inclusive end exclusive
+        System.out.println(sb); //ca
+
+        sb.deleteCharAt(sb.length()-1);
+        System.out.println(sb); //c
+
+        //for each loop does not work on StringBuilder
     }
 }

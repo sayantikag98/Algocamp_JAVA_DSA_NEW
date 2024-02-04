@@ -70,7 +70,10 @@ public class StringsDemo {
         System.out.println(s1.substring(0,3)); //str -> including start index and excluding end index
         System.out.println(s1.substring(0)); //string
         System.out.println(s1.lastIndexOf('l')); //-1
+        System.out.println(s1.startsWith("str")); //true
+        System.out.println(s1.startsWith("Str")); //false
+        System.out.println(s1.startsWith("r", 2)); //true
 
-
+        //for each loop does not work on String
     }
 }
